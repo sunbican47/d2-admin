@@ -1,0 +1,179 @@
+@import 'public';
+
+// 补丁 base
+@import '~@/assets/style/fixed/base.scss';
+// 补丁 element
+@import '~@/assets/style/fixed/element.scss';
+
+// 动画
+@import '~@/assets/style/animate/vue-transition.scss';
+
+// 在这里写公用的class
+// 注意 这个文件里只写class
+// mixin等内容请在 public.scss 里书写
+
+// 文字相关
+.#{$prefix}-text-center {
+  text-align: center;
+}
+
+// 浮动相关
+.#{$prefix}-fl {
+  float: left;
+}
+.#{$prefix}-fr {
+  float: right;
+}
+
+// 边距相关
+$sizes: (0, 5, 10, 15, 20);
+
+@for $index from 1 to 6 {
+  .#{$prefix}-m-#{nth($sizes, $index)} { margin: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-mt-#{nth($sizes, $index)} { margin-top: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-mr-#{nth($sizes, $index)} { margin-right: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-mb-#{nth($sizes, $index)} { margin-bottom: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-ml-#{nth($sizes, $index)} { margin-left: #{nth($sizes, $index)}px !important; }
+
+  .#{$prefix}-p-#{nth($sizes, $index)} { padding: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-pt-#{nth($sizes, $index)} { padding-top: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-pr-#{nth($sizes, $index)} { padding-right: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-pb-#{nth($sizes, $index)} { padding-bottom: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-pl-#{nth($sizes, $index)} { padding-left: #{nth($sizes, $index)}px !important; }
+}
+
+// 快速使用
+
+.#{$prefix}-m { margin: 20px !important; }
+.#{$prefix}-mt { margin-top: 20px !important; }
+.#{$prefix}-mr { margin-right: 20px !important; }
+.#{$prefix}-mb { margin-bottom: 20px !important; }
+.#{$prefix}-ml { margin-left: 20px !important; }
+
+.#{$prefix}-p { padding: 20px !important; }
+.#{$prefix}-pt { padding-top: 20px !important; }
+.#{$prefix}-pr { padding-right: 20px !important; }
+.#{$prefix}-pb { padding-bottom: 20px !important; }
+.#{$prefix}-pl { padding-left: 20px !important; }
+
+// 字体大小
+
+.#{$prefix}-12{font-size: 12px;}
+.#{$prefix}-13{font-size: 13px;}
+.#{$prefix}-14{font-size: 14px;}
+.#{$prefix}-16{font-size: 16px;}
+.#{$prefix}-18{font-size: 18px;}
+.#{$prefix}-20{font-size: 20px;}
+.#{$prefix}-22{font-size: 22px;}
+.#{$prefix}-24{font-size: 24px;}
+.#{$prefix}-26{font-size: 26px;}
+.#{$prefix}-28{font-size: 28px;}
+
+// 动画
+
+.fadeIn{transition:all 0.2s ease;}
+.fadeIn:hover{opacity: 0.9;}
+
+.bound{transition:all 0.2s ease;}
+.bound:hover{transform: scale(1.15);}
+
+.rotate{transition:all 0.2s ease;transform: rotate(360deg);}
+
+//d2新增
+.d2-layout-header-aside-group{min-width: 1200px;}
+html,body{font-size: 14px;}
+p{margin: 0;}
+.#{$prefix}-clear{clear: both;}
+.#{$prefix}-clear-right{clear: right;}
+.#{$prefix}-title{line-height: 18px;margin-bottom: 18px;margin-top:18px;text-indent: 14px;border-left: 3px solid $color-primary;}
+.c333{color:#333;}
+.czt{color:$color-primary;}
+.cwarning{color:$color-warning;}
+.cdanger{color:$color-danger;}
+.csuccess{color:$color-success;}
+.c666{color:#666;}
+.c999{color:#999;}
+.cfff{color:#fff;}
+.cred{color:#ff3300;}
+.bgczt{background-color:$color-primary;}
+.bgce2{background-color:#e2e2e2;}
+.bgc666{background-color:#666;}
+.bgc999{background-color:#999;}
+.bgcfff{background-color:#fff;}
+.#{$prefix}-br1e2{border:1px solid #e2e2e2;border-radius: 5px;}
+.#{$prefix}-p10{padding:10px;}
+.#{$prefix}-w100{width: 100%;}
+.positionre{position: relative;}
+.pointer{cursor: pointer;}
+
+.tc{text-align: center;}
+.tl{text-align: left;}
+.tr{text-align: right;}
+.positionre{position: relative;}
+
+/*flex*/
+.dflex{display: flex;}
+.flex1{flex:1;}
+.flex2{flex:2;}
+.flex3{flex:3;}
+.flex4{flex:4;}
+.flex5{flex:5;}
+.row{flex-direction: row;}
+.column{flex-direction: column;}
+.aiCenter{align-items: center;}
+.aiStart{align-items: flex-start;}
+.aiEnd{align-items: flex-end;}
+.aiBase{align-items: baseline;}
+.aiStretch{align-items: stretch;}
+.jcCenter{justify-content:center;}
+.jcAround{justify-content:space-around;}
+.jcBetween{justify-content:space-between;}
+.jcStart{justify-content:flex-start;}
+.jcEnd{justify-content: flex-end;}
+.flexwrap{flex-wrap: wrap;}
+
+.#{$prefix}-labal{font-size: 14px;color:#606266;width: 120px;display: inline-block;padding:14px 0;}
+.#{$prefix}-text{font-size: 14px;padding:12px 0;}
+.#{$prefix}-avatar{width: 80px;height: 80px;border-radius: 50px;border:1px solid #999;background-color: #e2e2e2}
+.#{$prefix}-erweima{width: 80px;height: 80px;border-radius: 2px;border:1px solid #999;background-color: #e2e2e2}
+.#{$prefix}-erweima:hover{transform: scale(4) translateX(20px);transition:all 0.2s ease;}
+
+.#{$prefix}-afterline{position: relative;}
+.#{$prefix}-afterline::after{content: '';width: 100%;height: 1px;background-color: #e2e2e2;position: absolute;bottom:0;left:0;}
+
+.img{width:120px;height: 60px;}
+
+//富文本
+.edui-default .edui-button-body, .edui-splitbutton-body, .edui-menubutton-body, .edui-combox-body{line-height: 20px !important;}
+
+//规格
+$cdc:#DCDFE6;
+.parameter-view{
+  //padding-left:120px;
+  .main{
+    padding:10px;
+    border:1px solid $cdc;
+    border-radius: 4px;
+    .title{margin-bottom:10px;}
+    .parameter-scroll{
+      max-height: 30vh;
+      padding:10px 0;
+      border:1px solid $cdc;
+      border-radius: 4px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+    .parameter-item{
+      padding:6px 0 10px;
+      //margin-bottom:10px;
+      //border-bottom:1px solid $cdc;
+      .index{width: 40px;text-align: center;}
+      .upload-btn{line-height: 20px;}
+      .upload-demo{display: flex;flex-direction: column;justify-content: center;height: 32px;}
+      .el-upload--text{line-height: 20px;width: 100%;text-align: left;padding-left:4px;}
+      .el-upload-list{line-height: 20px;height: 20px;float: left;display: none;}
+      .el-upload-list__item:first-child{margin: 0;}
+    }
+    .parameter-operate{padding-left:40px;margin-top:10px;}
+  }
+}
